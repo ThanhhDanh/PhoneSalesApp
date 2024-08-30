@@ -1,0 +1,112 @@
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size:62.5%;
+    line-height:1.6rem;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; /*sans-serif là trùm chữ kh có chân*/
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+body {
+    scroll-behavior:smooth;
+}
+
+:root {
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:rgba(0, 0, 0, .8);
+    --primary-text-color:rgba(0, 0, 0, .6);
+
+
+    --height-header-top: 42px;
+    --height-header-bottom: 42px;
+    --height-header:125px;
+    --r-globalnav-flyout-rate: 368ms;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 1240px;
+    max-width: 1240px;
+}
+
+.text-underline:hover {
+    text-decoration: underline;
+}
+
+.grid.wide-2 {
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.title {
+    color: var(--primary-text-color);
+    font-size:1.2rem;
+    font-weight:500;
+    margin-bottom:14px;
+    display:inline-block;
+}
+
+.title-nav {
+    color:var(--text-color);
+    font-size:2rem;
+    font-weight:700;
+}
+
+.text-follow {
+    color: #6e6e73;
+    font-size: 2rem;
+}
+
+.active {
+    display:none !important;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display:flex;
+    animation: fadeIn 0.1s linear;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    margin:auto;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform:translateY(-2%);
+    }
+    to {
+        transform:translateY(0);
+    }
+}
